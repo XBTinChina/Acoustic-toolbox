@@ -17,7 +17,7 @@ if cf == 0
 elseif bandwidth == 0
     carrier =  sin(2 * pi * cf * (1/fs:1/fs:duration/1000));
 else
-    carrier = TX_narrowband_noise(duration,cf,5,bandwidth );
+    carrier = TX_narrowband_noise(duration,fs,20,bandwidth );
 end
 
 am = carrier .* env;

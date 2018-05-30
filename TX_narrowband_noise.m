@@ -14,9 +14,8 @@ w1 = bandwidth(1);
 w2 = bandwidth(2) ;
 
 
-stopband = 200;
 
-[n,Wn] = buttord([w1 w2] * 2/fs,[w1-w1/10 w2+w2/10] * 2/fs,3,10)
+[n,Wn] = buttord([w1 w2] * 2/fs,[w1-w1/20 w2+w2/20] * 2/fs,3,10)
 
 [b,a]=butter(n,Wn);
 
